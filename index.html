@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FloralTienda</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="/style/estilos.css" rel="stylesheet">
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/Logo.png" alt="Bootstrap" width="30" height="24">
+                  </a>
+              <a class="navbar-brand" href="#">FloralTienda</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Conocenos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div id="carouselExampleIndicators" class="carousel slide carouselPersonalizado" data-bs-ride="true">
+                        <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/img/Productos/1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/Productos/2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/Productos/3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card text-center" style="height: 100%;">
+                        <div class="card-header">
+                            Vestido
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"> Vestido Lino Terracota</h5>
+                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sint rerum molestiae assumenda voluptas perspiciatis similique neque temporibus, amet facere vel asperiores, totam recusandae magnam ratione quis. Ullam, quia laudantium.</p>
+                          <div class="row">
+                            <div class="col-6 text-end">Cantidad de prendas: </div>
+                            <div class="col-2">
+                                <select onchange="calcularTotal()" class="form-control" id="cantPrendas">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                          </div>
+                          <br/>
+                          <div class="row precioDiv">
+                            <div class="col-6 text-end">Precio: </div>
+                            <div class="col-6">
+                                <p id="precio" class="text-start">2800</p>
+                            </div>
+                          </div>
+                          <br/>
+                          <a onclick="comprar()" class="btn btn-primary">Comprar</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                          FloralTienda
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13138.75121178938!2d-58.464203774929054!3d-34.58676530268723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5e4f16280ed%3A0xe9081090e901558f!2sFederico%20Lacroze!5e0!3m2!1sen!2sar!4v1668124967894!5m2!1sen!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="./js/Clase04.js"></script>
+    </body>
+    
+</html>
